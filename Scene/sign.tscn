@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cmfj4auut5jxo"]
+
+[ext_resource type="Script" uid="uid://v1vwtsk3hbwk" path="res://Script/sign.gd" id="1_f4fpa"]
+[ext_resource type="Texture2D" uid="uid://bh2opq7pdh3xf" path="res://Assests/NPC/Jester/Jester Walk-Sheet.png" id="2_cs028"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q28vp"]
+size = Vector2(39, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn227"]
+atlas = ExtResource("2_cs028")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12xt8"]
+atlas = ExtResource("2_cs028")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogeih"]
+atlas = ExtResource("2_cs028")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53tpc"]
+atlas = ExtResource("2_cs028")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un7h8"]
+atlas = ExtResource("2_cs028")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gywe"]
+atlas = ExtResource("2_cs028")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q28vp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn227")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12xt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogeih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53tpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un7h8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gywe")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dy6ld"]
+size = Vector2(35.878788, 25.17949)
+
+[node name="Area2D" type="Area2D" unique_id=1201469109]
+script = ExtResource("1_f4fpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=326088743]
+position = Vector2(9.5, 30.5)
+shape = SubResource("RectangleShape2D_q28vp")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1887695339]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
+text = "E"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1352378579]
+position = Vector2(6.5, 47.5)
+scale = Vector2(1.03125, 1.21875)
+sprite_frames = SubResource("SpriteFrames_q28vp")
+autoplay = "default"
+frame_progress = 0.31995904
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D" unique_id=841080376]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D" unique_id=1467464131]
+position = Vector2(0.4848485, 2.8717952)
+shape = SubResource("RectangleShape2D_dy6ld")

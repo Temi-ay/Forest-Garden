@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://mopbr36mm46"]
+
+[ext_resource type="Script" uid="uid://cg81k14uvqie2" path="res://Script/quest_obj.gd" id="1_b7hsh"]
+[ext_resource type="Script" uid="uid://dewrl6ndwd27e" path="res://Script/quest_data.gd" id="2_k6uer"]
+
+[sub_resource type="Resource" id="Resource_cfyuc"]
+script = ExtResource("1_b7hsh")
+description = "Find Mira ornament"
+target = "ornament"
+metadata/_custom_type_script = "uid://cg81k14uvqie2"
+
+[resource]
+script = ExtResource("2_k6uer")
+id = "mira_quest"
+title = "Mira's  Lost ornament"
+description = "Mira lost something the the forest try asking thr old man"
+objectives = Array[ExtResource("1_b7hsh")]([SubResource("Resource_cfyuc")])
+reward_item_id = "lantern"
+reward_amount = 2
+metadata/_custom_type_script = "uid://dewrl6ndwd27e"

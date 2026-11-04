@@ -1,0 +1,30 @@
+{
+	"entry": [
+		{"if_flag": "mira_quest_done", "node": "after"}, 
+		{"quest_ready": "mira_quest", "node": "return"},
+		{"if_flag": "mira_quest_started", "node": "waiting"},
+		{"node": "intro"}
+	],
+	"nodes": {
+		"intro": {"speaker": "Mira", "text": "I lost something in the forest.", "next": "ask"},
+		"ask": {
+			"speaker": "Mira",
+			"text":"Would you help me look for it?",
+			"choices":[
+				{"text": "Of course.", "next": "accept", "start_quest": "mira_quest"},
+				{"text": "Not right now.","next": "decline"}
+			]
+		},
+		"return": {
+			"speaker": "Mira",
+			"text": "My locket! You found it!",
+			"take_item": "ornament",
+			"complete_quest": "mira_quest",
+			"next": "after"
+		},
+		"accept": {"speaker": "Mira", "text": "Thank you. Ask the Old man."},
+		"decline": {"speaker": "Mira", "text": "Oh...maybe next time, then."},
+		"waiting": {"speaker": "Mira", "text":"Any luck finding it?"},
+		"after": {"speaker": "Mira", "text": "Thanks for your help, Here are two lantern"}
+	}
+}

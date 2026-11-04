@@ -1,0 +1,8 @@
+{
+	"entry": [{"node": "a"}],
+	"nodes": {
+		"a": {"text": "Every night the forest changes, and the villagers forget what happened the day before.", "next": "b"},
+		"b": {"text": "You must keep the lantern, It is the only hope. "},
+		"c": {"text": "Talk to the villagers. Walk up to them and press E"}
+	}
+}

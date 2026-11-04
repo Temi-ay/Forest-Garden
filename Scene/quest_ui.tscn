@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://mqg3nu7b6b1i"]
+
+[ext_resource type="Script" uid="uid://dt65vlf8ux3i8" path="res://Script/quest_ui.gd" id="1_bbpal"]
+
+[node name="QuestUI" type="CanvasLayer" unique_id=1707728997]
+script = ExtResource("1_bbpal")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=992715998]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -25.0
+offset_right = 152.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1854388224]
+layout_mode = 2
+
+[node name="QuestList" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1128919581]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1974622932]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=975486636]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DescrLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=219120250]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="ObjLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=134629435]
+unique_name_in_owner = true
+layout_mode = 2

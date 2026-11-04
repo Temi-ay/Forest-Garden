@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://v85rsgymaojf"]
+
+[ext_resource type="Texture2D" uid="uid://dx4q762e2s2kg" path="res://Assests/ornament.png" id="1_qs6im"]
+[ext_resource type="Script" uid="uid://dgmooxjlticvf" path="res://Script/item_data.gd" id="2_kwluf"]
+
+[resource]
+script = ExtResource("2_kwluf")
+id = "ornament"
+display_name = "Ornament"
+description = "a blue oval ornament , mira's ornament"
+icon = ExtResource("1_qs6im")
+max_stack = 1
+metadata/_custom_type_script = "uid://dgmooxjlticvf"

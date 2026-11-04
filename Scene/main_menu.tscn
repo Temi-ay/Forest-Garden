@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://d04iycoxarxsu"]
+
+[ext_resource type="Theme" uid="uid://b24ltbeo0my88" path="res://Theme/ui_theme.tres" id="1_ftydy"]
+[ext_resource type="Script" uid="uid://cwlkmt4ib4pvs" path="res://Script/main_menu.gd" id="2_87ipw"]
+
+[node name="MainMenu" type="Control" unique_id=959533407]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 636.0
+offset_bottom = 359.0
+theme = ExtResource("1_ftydy")
+script = ExtResource("2_87ipw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=369902450]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18548974, 0.24159485, 0.18547878, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=974209055]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.25
+offset_top = -141.0
+offset_right = 198.25
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=8973007]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Forest Game"
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=659180855]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = " Play "
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1162474144]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = " Settings "
+
+[node name="Instructions" type="Button" parent="VBoxContainer" unique_id=1624388199]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = " How To Play"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1326895538]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = " Quit "
+
+[node name="HowToPanel" type="PanelContainer" parent="." unique_id=781338923]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.5
+offset_top = -109.0
+offset_right = 131.5
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HowToPanel" unique_id=74831931]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HowToPanel/VBoxContainer" unique_id=850878056]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.029309642, 4.1873755e-06, 0.34143606, 1)
+text = "CONTROLS
+Arrow keys / WASD - Move
+E - Talk / Interact / Pick up
+Tab - Inventory
+Q -Quest Log
+Esc - Close menus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="HowToPanel/VBoxContainer" unique_id=858685477]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "Back"
+
+[node name="SettingsPanel" type="PanelContainer" parent="." unique_id=1081839546]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.5
+offset_top = -97.5
+offset_right = 139.5
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=218278926]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Settings" type="Label" parent="SettingsPanel/VBoxContainer" unique_id=559483710]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.7026254e-06, 0.039593782, 0.18702057, 1)
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="GridContainer" type="GridContainer" parent="SettingsPanel/VBoxContainer" unique_id=1981831111]
+layout_mode = 2
+columns = 2
+
+[node name="Master" type="Label" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=1360429156]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25882354, 0, 0.41960785, 1)
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=485176742]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="Music" type="Label" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=451011536]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.33333334, 0, 0.5647059, 1)
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=112866449]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="SFX" type="Label" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=1941794490]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36988184, 0.0015789774, 0.63889074, 1)
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=2029232126]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="Fullscreen" type="Label" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=1010124963]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.48958337, 0.0019883777, 0.73240477, 1)
+text = "Fullscreen"
+
+[node name="FullscreenCheck" type="CheckBox" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=834956861]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SettingsClose" type="Button" parent="SettingsPanel/VBoxContainer/GridContainer" unique_id=435908416]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36119327, 0.0029027176, 0.4989255, 1)
+text = "Back"

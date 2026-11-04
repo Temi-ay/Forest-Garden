@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cpy3m8exqe6pt"]
+
+[ext_resource type="Script" uid="uid://bk71p7l8gmme1" path="res://Script/pause_menu.gd" id="1_i3got"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=202292277]
+script = ExtResource("1_i3got")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1597036043]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.23529412)
+
+[node name="PausePanel" type="VBoxContainer" parent="." unique_id=403142820]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.75
+offset_top = -70.0
+offset_right = 55.75
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PausePanel" unique_id=2134417240]
+layout_mode = 2
+text = "Paused"
+
+[node name="ResumeButton" type="Button" parent="PausePanel" unique_id=2144095863]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Resume "
+
+[node name="Instructions" type="Button" parent="PausePanel" unique_id=2049227741]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Controls"
+
+[node name="TitleButton" type="Button" parent="PausePanel" unique_id=1459684857]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"
+
+[node name="ControlsPanel" type="PanelContainer" parent="." unique_id=383180134]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -126.0
+offset_right = 107.5
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlsPanel" unique_id=1086702789]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ControlsPanel/VBoxContainer" unique_id=120767322]
+layout_mode = 2
+text = "CONTROLS
+Arrow keys / WASD - Move
+E - Talk / Interact / Pick up
+Tab - Inventory
+Q -Quest Log"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="ControlsPanel/VBoxContainer" unique_id=1243932717]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
