@@ -38,7 +38,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
-text = "Forest Game"
+text = "Lantern Village"
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=659180855]
 unique_name_in_owner = true
