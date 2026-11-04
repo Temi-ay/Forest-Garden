@@ -2,7 +2,7 @@
  A cozy top-down godot game. Explore, talk to the people you meet,complete their tasks and get rewards
 ## Screenshot
 
-![Lantern Village](Screenshot_4-11-2026_04645_gracetem.itch.io.jpeg)
+![Lantern Village]()
 
 ## Try It
 
